@@ -1,0 +1,27 @@
+<html>
+<head>
+	<link href='/static/default.css' rel="stylesheet">  
+	<link href='/static/third_party/fonts/roboto.css' rel="stylesheet">   
+	<link href="/static/third_party/vue/vuetify.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+    <div id="app">
+        <v-app>
+        	<v-container>
+        		<v-text-field label="Namespace" v-model="namespace" required></v-text-field>
+        		<v-text-field label="Name" v-model="name" required></v-text-field>
+        		<v-btn @click="show">Show</v-btn>
+                <div id="Chart" style="height:500px"></div>
+    		</v-container>
+        </v-app>
+    </div>
+	<script src="/static/third_party/vue/vue.min.js"></script>
+	<script src="/static/third_party/vue/vue-resource.min.js"></script>
+    <script src="/static/third_party/vue/vue-loader.min.js"></script>
+    <script src="/static/third_party/vue/vuetify.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="/static/index.js"></script>
+</body>
+</html>
+                                             

@@ -1,0 +1,3 @@
+[submodule "third_party/mongo_utils"]
+	path = third_party/mongo_utils
+	url = git@github.com:bowen-zhang/mongo_utils.git

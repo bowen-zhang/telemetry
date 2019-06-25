@@ -1,0 +1,42 @@
+syntax="proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+message Metadata {
+	int32 id = 1;
+	string namespace = 2;
+	string name = 3;
+}
+
+message Counter {
+	int32 id = 1;
+	string name = 2;
+	google.protobuf.Timestamp timestamp = 3;
+	int32 last_min_count = 4;
+}
+
+message Sample {
+	int32 metric_id = 1;
+	google.protobuf.Timestamp timestamp = 2;
+	int32 count = 3;
+	float average = 4;
+	float min = 5;
+	float max = 6;
+	float p50 = 7;
+	float p90 = 8;
+	float p95 = 9;
+	float p99 = 10;
+	repeated float values = 11;
+}
+
+
+message MetricCollection {
+	string namespace = 1;
+	repeated Counter counters = 2;
+}
+
+service Telemetry {
+	rpc GetMetrics(google.protobuf.Empty) returns (MetricCollection) {}
+}
