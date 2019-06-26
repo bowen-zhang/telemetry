@@ -8,8 +8,8 @@ from absl import flags
 from absl import logging
 from google.protobuf import empty_pb2
 
-from protos import telemetry_pb2
-from protos import telemetry_pb2_grpc
+from lib.protos import telemetry_pb2
+from lib.protos import telemetry_pb2_grpc
 from third_party.mongo_utils import storage
 
 FLAGS = flags.FLAGS

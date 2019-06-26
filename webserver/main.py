@@ -3,7 +3,7 @@ import flask
 
 from google.protobuf import json_format
 
-from protos import telemetry_pb2
+from lib.protos import telemetry_pb2
 from third_party.mongo_utils import storage
 
 
